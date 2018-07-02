@@ -18,7 +18,7 @@ Build an app of your choice.
 * If you would like to user `nodemon` to automatically rebuild your server, run `npm run server`
 
 * The node server file is `/server.js`
-* To avoid using `hbs` unnecessarily, we have placed `index.html` in the `/static` folder and are serving it as a static html file. The `static` route is configured to serve files from `/` path rather than `/static`.
+* To avoid using `hbs` unnecessarily, we have placed `index.html` in the `/static` folder and are serving it as a static html file. The `static` route is configured to serve files from `/` path rather than `/static` as we did with `Delivereat` to allow `index.html` to be served directly.
 
 * Place all static files such as images and CSS in the `static` folder.
 
