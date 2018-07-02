@@ -4,7 +4,7 @@ Build an app of your choice.
 
 - You are free to use any technologies covered so far. You are welcome to try new technologies you find interesting.
 - Keep it simple. Aim to get the basic functionality working on day one. You can then extend it on days two and three.
-- Use pen and paper to draw a diagram of the layout before starting to code.
+- Use pen and paper to draw a diagram of the webpage layout before starting to code. Have a think about what components you will need in advance.
 - Think about how to organise your data in advance
 - Make sure your app is responsive
 - Commit frequently
