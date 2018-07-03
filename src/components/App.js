@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import PlayWindow from "./PlayWindow";
 import spotify from "../spotify";
 
 class App extends React.Component {
@@ -33,10 +34,12 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <h1>{this.state.artist}</h1>
-        <img src={this.state.coverArtSrc} />
-        <p>{this.state.album}</p>
-        <p>{this.state.trackName}</p>
+        <PlayWindow
+          artist={this.state.artist}
+          album={this.state.album}
+          coverArtSrc={this.state.coverArtSrc}
+          trackName={this.state.trackName}
+        />
       </div>
     );
   }
