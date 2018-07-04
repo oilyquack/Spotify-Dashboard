@@ -1,6 +1,6 @@
 const config = {
   token:
-    "BQBzHVLggkW_p_2Eyw6RIWaxA0_rVkDL3HpaGEfNHLztvmIPn66pdPInfR99635oMaA192PiRB46EKdRM4WDbQ_lr1erFk_3qbiGZz6067e51Wy4Y0dpIFdxo4j8lY6pNzD2tkdgKAmUzE0MHyphiA8uI7PNaBf6ahJD",
+    "BQBeStbXDZ_0yNpPnAV_HDKTp6976Ca0JyCJi9zZLrpIku0M58NuiE26DESUr4FQ59wRiKrX-bLkZmF_yZRb8RoCjnZiDJj36FhQ7l1D5BLFtLZA-Ro5nAh5ZrKfnoDLB0twym4ba0ZMBg2BR5h0p6XjTcuw-kTbP34c",
   url: "https://api.spotify.com"
 };
 
@@ -12,7 +12,7 @@ export default function(stateChanged) {
 window.onSpotifyWebPlaybackSDKReady = () => {
   const token = config.token;
   const player = new Spotify.Player({
-    name: "Web Playback SDK Quick Start Player",
+    name: "Spotify Dashboard",
     getOAuthToken: cb => {
       cb(token);
     }
@@ -34,7 +34,6 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   // Playback status updates
   player.addListener("player_state_changed", state => {
-    console.log(state);
     myStateChanged(state);
   });
 

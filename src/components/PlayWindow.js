@@ -2,9 +2,9 @@ import React from "react";
 
 function PlayWindow({ artist, album, coverArtSrc, trackName }) {
   return (
-    <div>
+    <div className="app__playWindow">
       <h1>{artist}</h1>
-      <img src={coverArtSrc} />
+      <img className="app__playWindow__img" src={coverArtSrc} />
       <p>{album}</p>
       <p>{trackName}</p>
     </div>
