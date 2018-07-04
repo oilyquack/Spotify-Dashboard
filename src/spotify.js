@@ -1,6 +1,6 @@
 const config = {
   token:
-    "BQDRkv8g8jHWIh8b6EaTDOYwwrzCj0zItxtKYhRX-SeemZPIrDoKw8GajTDrX-CP2dzs3ZPVplZW_yshl1bQPLvE8A2jpWRkrmLtFCpHwnfipCyuA5SVRzOuFLDq_qBVev4PWHfB4H63CqzHkqk3GnaT7TC2TNf8PHns",
+    "BQCtmm99vrO1CMXffmj5Zxp6LjgrizVt6axk_WgtLmflOVwtCp-wFN6TfHL8mY2uOQYuSrGNMLwvNl4tyG8qGbgryMUhuVDW__mZbFrS0Plii5HuHE7Roc__MybUW6hj9-uGqarGuI-OBrsu9lL5HFINHhw7UzDOcqyg",
   url: "https://api.spotify.com"
 };
 
@@ -34,7 +34,6 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   // Playback status updates
   player.addListener("player_state_changed", state => {
-    console.log(state);
     myStateChanged(state);
   });
 

@@ -6,7 +6,9 @@ function PlayWindow({ artist, album, coverArtSrc, trackName }) {
       <h1>{artist}</h1>
       <img className="app__playWindow__img" src={coverArtSrc} />
       <p>{trackName}</p>
-      <p>{album}</p>
+      <p>
+        <i>{album}</i>
+      </p>
     </div>
   );
 }

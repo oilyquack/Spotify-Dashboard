@@ -21,6 +21,10 @@ body {
     center top;
 }
 
+.header h1 {
+  margin: 0;
+}
+
 .header li {
   list-style-type: none;
 }
@@ -100,7 +104,7 @@ body {
   }
 
   .app__playWindow__img {
-    width: 380px;
+    width: 440px;
   }
 
   .app__events {
@@ -118,7 +122,7 @@ body {
 
 @media (min-width: 992px) {
   .app__playWindow__img {
-    width: 400px;
+    width: 500px;
   }
 
   .app__events__event {
