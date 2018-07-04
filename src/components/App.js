@@ -48,7 +48,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Header />
+        <Header artist={this.state.artist} />
         <div className="app__content">
           <PlayWindow
             artist={this.state.artist}
