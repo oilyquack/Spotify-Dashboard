@@ -63,13 +63,17 @@ body {
   min-width: 300px;
   margin: 10px;
   padding: 10px 20px;
-  background: rgba(243, 151, 98, 0.5);
+  background: rgb(180, 111, 71);
   color: rgb(243, 238, 234);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .app__events__event p {
   font-size: 13px;
+}
+
+.app__events__event:nth-child(even) {
+  background: rgb(145, 94, 64);
 }
 
 .app__events__event a:link {
@@ -79,7 +83,7 @@ body {
 
 .app__events__event a:active {
   color: rgb(116, 113, 111);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .app__events__event a:hover {
