@@ -2,15 +2,23 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  background: rgb(255, 244, 237);
+  color: rgb(76, 72, 69);
 }
 
 .header {
   text-align: center;
-  background: linear-gradient(rgb(243, 151, 98), rgb(255, 230, 215));
   padding: 20px;
+  background: linear-gradient(rgb(243, 151, 98), rgb(255, 244, 237)) no-repeat
+    center top;
 }
 
 .header li {
@@ -22,34 +30,98 @@ body {
 }
 
 .app__content {
+  flex: 1;
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  background: rgb(255, 244, 237);
+  overflow: hidden;
 }
 
 .app__playWindow {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .app__playWindow__img {
-  width: 600px;
+  width: 300px;
 }
 
 .app__events {
-  flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 15px;
+  overflow: scroll;
 }
 
 .app__events__event {
-  display: flex;
-  flex-direction: column;
-
-  max-width: 200px;
+  min-width: 300px;
   margin: 10px;
-  background: rgb(204, 204, 204);
-  border: black 1px solid;
+  padding: 10px 20px;
+  background: rgba(243, 151, 98, 0.5);
+  color: rgb(243, 238, 234);
+}
+
+.app__events__event a:link {
+  color: rgb(243, 238, 234);
+  text-decoration: none;
+}
+
+.app__events__event a:active {
+  color: rgb(116, 113, 111);
+  text-decoration: none;
+}
+
+.app__events__event a:hover {
+  color: rgb(170, 166, 162);
+  text-decoration: none;
+}
+
+.app__events__event a:visited {
+  color: rgb(243, 238, 234);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .app__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .app__playWindow {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app__playWindow__img {
+    width: 380px;
+  }
+
+  .app__events {
+    flex: 1;
+    flex-direction: column;
+    margin: 20px;
+    overflow-y: scroll;
+  }
+
+  .app__events__event {
+    justify-content: center;
+    width: 220px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app__playWindow__img {
+    width: 400px;
+  }
+
+  .app__events__event {
+    width: 310px;
+  }
 }
