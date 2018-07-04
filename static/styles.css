@@ -48,6 +48,7 @@ body {
 
 .app__playWindow__img {
   width: 300px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .app__events {
@@ -55,6 +56,7 @@ body {
   flex-direction: row;
   padding: 15px;
   overflow: scroll;
+  margin: 0;
 }
 
 .app__events__event {
@@ -63,6 +65,11 @@ body {
   padding: 10px 20px;
   background: rgba(243, 151, 98, 0.5);
   color: rgb(243, 238, 234);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.app__events__event p {
+  font-size: 13px;
 }
 
 .app__events__event a:link {
@@ -111,12 +118,14 @@ body {
     flex: 1;
     flex-direction: column;
     margin: 20px;
+    margin-bottom: 0px;
     overflow-y: scroll;
   }
 
   .app__events__event {
     justify-content: center;
-    width: 220px;
+    min-width: 50px;
+    width: 230px;
   }
 }
 
@@ -127,5 +136,19 @@ body {
 
   .app__events__event {
     width: 310px;
+  }
+
+  .app__events__event p {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app__playWindow__img {
+    width: 540px;
+  }
+
+  .app__events__event {
+    width: 350px;
   }
 }

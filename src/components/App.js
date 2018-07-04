@@ -60,7 +60,7 @@ class App extends React.Component {
             <Events eventList={this.state.events} />
           ) : (
             <div className="app__events">
-              <h1>There are no upcoming events.</h1>
+              <h1>No upcoming events.</h1>
             </div>
           )}
         </div>
