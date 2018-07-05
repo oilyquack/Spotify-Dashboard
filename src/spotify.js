@@ -34,7 +34,6 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   // Playback status updates
   player.addListener("player_state_changed", state => {
-    console.log("Player state changed", state);
     myStateChanged(state);
   });
 
