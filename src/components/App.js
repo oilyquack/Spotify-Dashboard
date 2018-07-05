@@ -63,12 +63,25 @@ class App extends React.Component {
       <div className="app">
         <Header connected={this.state.connected} />
         <div className="app__content">
-          <PlayWindow
-            artist={this.state.artist}
-            album={this.state.album}
-            coverArtSrc={this.state.coverArtSrc}
-            trackName={this.state.trackName}
-          />
+          {this.state.connected === true ? (
+            <PlayWindow
+              artist={this.state.artist}
+              album={this.state.album}
+              coverArtSrc={this.state.coverArtSrc}
+              trackName={this.state.trackName}
+            />
+          ) : (
+            <iframe
+              className="youTubePlaceholder"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/BvQ571eAOZE"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            />
+          )}
+
           {this.state.events.length && this.state.connected === true ? (
             <Events eventList={this.state.events} />
           ) : !this.state.events.length && this.state.connected ? (

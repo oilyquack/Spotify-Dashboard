@@ -42,6 +42,10 @@ body {
   overflow: hidden;
 }
 
+.youTubePlaceholder {
+  visibility: hidden;
+}
+
 .app__playWindow {
   text-align: center;
 }
@@ -109,6 +113,13 @@ body {
   .app__content {
     display: flex;
     flex-direction: row;
+  }
+
+  .youTubePlaceholder {
+    visibility: visible;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .app__playWindow {

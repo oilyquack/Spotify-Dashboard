@@ -9,7 +9,6 @@ function Header({ connected }) {
           <li>Make sure your devices are connected to the same Wi-Fi</li>
           <li>Open your Spotify app</li>
           <li>Under 'Connect to a device', select 'Spotify Dashboard'</li>
-          <li>Watch the magic unfold</li>
         </ul>
       ) : null}
     </div>

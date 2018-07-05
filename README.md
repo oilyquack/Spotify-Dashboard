@@ -30,6 +30,7 @@ This device also works responsively at different views, allowing the user to rea
 
 - This app has good responsivity for various devices, allowing for a minimalist sleek view while keeping the ability to navigate through a wide range of information.
 - I feel that this project has demonstrated my ability to create and maintain clean and human-friendly React components and data structure.
+- Information presented in the app changes based on whether the user has a device connected or not. This is implemented in `App.js` on lines 24-44.
 
 ## Unresolved Issues/Un-implemented Features
 
