@@ -4,6 +4,7 @@ function Header({ connected }) {
   return (
     <div className="header">
       <h1>Spotify Dashboard</h1>
+
       {!connected === true ? (
         <div className="header__instructions">
           <ul>

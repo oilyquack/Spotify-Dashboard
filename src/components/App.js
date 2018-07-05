@@ -71,14 +71,9 @@ class App extends React.Component {
               trackName={this.state.trackName}
             />
           ) : (
-            <iframe
-              className="youTubePlaceholder"
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/BvQ571eAOZE"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
+            <img
+              className="placeholder"
+              src="https://spotify.i.lithium.com/t5/image/serverpage/image-id/23501i81BB3A6F661F5D33/image-size/original?v=mpbl-1&px=-1"
             />
           )}
 

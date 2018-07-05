@@ -1,6 +1,6 @@
 const config = {
   token:
-    "BQCMtUlXIxIvOboagLu9NnHV9PWVOf3fAVfBoTejkpyn2IOME0LnuLO74d-mUwjo0vYr_3dCRs4LU0MfNLGqmmC1gWf8Jw-UZzypCw91lVBwwNiQpRdUAcZ6uayhDkcKWZiIbzjUzxqP7csAmVp1ym6LH2TQ38CAA4HD",
+    "BQAqG4PPFIjtlNh5gxa-4lIrolIyjxOEmtElto5RFxpZxlpWWh_KBkxU66ZhIMIGKnS6PxpetecTiav-B9p6gKfeWySDt7wabhLCNqvJirvxv_nt8zsiIn46kH9O8ETiOh0vUZaQ9QoafTuGRVWRcPYaR_nCsnaS7QNI",
   url: "https://api.spotify.com"
 };
 
