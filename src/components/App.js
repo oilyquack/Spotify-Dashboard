@@ -9,6 +9,7 @@ class App extends React.Component {
     super();
 
     this.state = {
+      connected: "",
       artist: "",
       album: "",
       coverArtSrc: "",
@@ -21,13 +22,25 @@ class App extends React.Component {
   }
 
   spotifyStateChanged(state) {
-    this.setState({
-      artist: state.track_window.current_track.artists[0].name,
-      album: state.track_window.current_track.album.name,
-      coverArtSrc: state.track_window.current_track.album.images[2].url,
-      trackName: state.track_window.current_track.name
-    });
-    this.eventFetch();
+    if (!state) {
+      this.setState({
+        connected: false,
+        artist: "",
+        album: "",
+        coverArtSrc: "",
+        trackName: "",
+        events: []
+      });
+    } else {
+      this.setState({
+        connected: true,
+        artist: state.track_window.current_track.artists[0].name,
+        album: state.track_window.current_track.album.name,
+        coverArtSrc: state.track_window.current_track.album.images[2].url,
+        trackName: state.track_window.current_track.name
+      });
+      this.eventFetch();
+    }
   }
 
   componentDidMount() {
@@ -48,7 +61,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Header artist={this.state.artist} />
+        <Header connected={this.state.connected} />
         <div className="app__content">
           <PlayWindow
             artist={this.state.artist}
@@ -56,13 +69,13 @@ class App extends React.Component {
             coverArtSrc={this.state.coverArtSrc}
             trackName={this.state.trackName}
           />
-          {this.state.events.length ? (
+          {this.state.events.length && this.state.connected === true ? (
             <Events eventList={this.state.events} />
-          ) : (
+          ) : !this.state.events.length && this.state.connected ? (
             <div className="app__events">
               <h1>No upcoming events.</h1>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     );

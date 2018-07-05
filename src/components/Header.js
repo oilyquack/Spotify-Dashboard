@@ -1,10 +1,10 @@
 import React from "react";
 
-function Header({ artist }) {
+function Header({ connected }) {
   return (
     <div className="header">
       <h1>Spotify Dashboard</h1>
-      {artist === "" ? (
+      {!connected === true ? (
         <ul>
           <li>Make sure your devices are connected to the same Wi-Fi</li>
           <li>Open your Spotify app</li>
