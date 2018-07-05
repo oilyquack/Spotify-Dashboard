@@ -1,6 +1,6 @@
 const config = {
   token:
-    "BQBWCYtSlcWKbKYNT1uBeR7CM_d-cWSt2V1sGPGe4jBemOYFGr-0kzuoBo0nj_svc2GsMv2JGF4JHhPg7oTPOWZ0_t2ugRZua_VtFMtpmsUHR7QQI10k3Scij8dCPkWxA2hARrpwyp5sjqYqEro2ZTIWLxDfcxzPXAEY",
+    "BQCMtUlXIxIvOboagLu9NnHV9PWVOf3fAVfBoTejkpyn2IOME0LnuLO74d-mUwjo0vYr_3dCRs4LU0MfNLGqmmC1gWf8Jw-UZzypCw91lVBwwNiQpRdUAcZ6uayhDkcKWZiIbzjUzxqP7csAmVp1ym6LH2TQ38CAA4HD",
   url: "https://api.spotify.com"
 };
 
@@ -39,7 +39,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   player.getCurrentState().then(state => {
     if (!state) {
-      console.error("User is not playing music through the Web Playback SDK");
+      console.log("User is not connected");
       return;
     }
   });

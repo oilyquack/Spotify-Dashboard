@@ -76,9 +76,9 @@ class App extends React.Component {
               width="560"
               height="315"
               src="https://www.youtube.com/embed/BvQ571eAOZE"
-              frameborder="0"
+              frameBorder="0"
               allow="autoplay; encrypted-media"
-              allowfullscreen
+              allowFullScreen
             />
           )}
 

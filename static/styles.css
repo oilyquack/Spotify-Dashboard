@@ -29,6 +29,11 @@ body {
   list-style-type: none;
 }
 
+.header__instructions li {
+  padding: 5px;
+  font-size: 14px;
+}
+
 .app {
   height: 100vh;
 }
