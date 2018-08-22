@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App ,atches the snapshot 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="header"
+  >
+    <h1>
+      Spotify Dashboard
+    </h1>
+    <div
+      className="header__instructions"
+    >
+      <ul>
+        <li>
+          Connect your Spotify device and browser to the same Wi-Fi
+        </li>
+        <li>
+          Open your Spotify app
+        </li>
+        <li>
+          Under 'Connect to a device', select 'Spotify Dashboard'
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="app__content"
+  >
+    <img
+      className="placeholder"
+      src="https://spotify.i.lithium.com/t5/image/serverpage/image-id/23501i81BB3A6F661F5D33/image-size/original?v=mpbl-1&px=-1"
+    />
+  </div>
+</div>
+`;
