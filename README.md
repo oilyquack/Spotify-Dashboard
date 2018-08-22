@@ -38,6 +38,7 @@ While I am very proud of the work I have done on this app, there are a number of
 
 - The Spotify SDK token only works for an hour. This can make the act of re-opening the spotify.js file, replacing the SDK token and rebooting the app in the browser somewhat tiresome. I would like to implement a feature whereby a new SDK token can be entered somewhere on the app which will replace the outdated token in the spotify.js file, but this is as yet un-implemented.
 - The Ticketmaster API provides amazing information about an artist's upcoming events. Unfortunately, it often returns 429 response status codes for too many requests. Sadly, there is no `Retry-After` header attached indicating how often this would happen. This can provide some annoying user experiences as the Spotify SDK re-triggers a fetch about 1 minute into a song. It also re-triggers a fetch when the song is paused and then played again. This can happen quite a few times during a play through, which can provide some undesirable results from the API. It can also provide issues if, for example, you skip through a couple of songs and the app will tell the user that there are no upcoming events regardless of if this is true or not!
+- The event list does not sort into date order. This would make for a much better user experience.
 
 ## Acknowledgements
 
