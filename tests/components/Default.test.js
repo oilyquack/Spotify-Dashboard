@@ -1,6 +1,6 @@
 import React from "react";
 import App from "../../src/components/App";
-import { shallow } from "enzyme"; // import shallow renderer from enzyme
+import { shallow, mount, render } from "enzyme"; // import shallow renderer from enzyme
 
 describe("App component", () => {
   it('starts with connected state of ""', () => {

@@ -3,6 +3,7 @@ import Header from "./Header";
 import PlayWindow from "./PlayWindow";
 import Events from "./Events";
 import spotify from "../spotify";
+const { updateToken } = require("../spotify");
 
 class App extends React.Component {
   constructor() {
@@ -10,6 +11,7 @@ class App extends React.Component {
 
     this.state = {
       connected: "",
+      token: "",
       artist: "",
       album: "",
       coverArtSrc: "",
@@ -19,10 +21,12 @@ class App extends React.Component {
 
     this.spotifyStateChanged = this.spotifyStateChanged.bind(this);
     this.eventFetch = this.eventFetch.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  spotifyStateChanged(state) {
-    if (!state) {
+  spotifyStateChanged(currentSpotifyState) {
+    if (!currentSpotifyState) {
       this.setState({
         connected: false,
         artist: "",
@@ -34,17 +38,14 @@ class App extends React.Component {
     } else {
       this.setState({
         connected: true,
-        artist: state.track_window.current_track.artists[0].name,
-        album: state.track_window.current_track.album.name,
-        coverArtSrc: state.track_window.current_track.album.images[2].url,
-        trackName: state.track_window.current_track.name
+        artist: currentSpotifyState.track_window.current_track.artists[0].name,
+        album: currentSpotifyState.track_window.current_track.album.name,
+        coverArtSrc:
+          currentSpotifyState.track_window.current_track.album.images[2].url,
+        trackName: currentSpotifyState.track_window.current_track.name
       });
       this.eventFetch();
     }
-  }
-
-  componentDidMount() {
-    spotify(this.spotifyStateChanged);
   }
 
   eventFetch() {
@@ -58,10 +59,31 @@ class App extends React.Component {
       .catch(error => this.setState({ events: [] }));
   }
 
+  handleChange(event) {
+    this.setState({
+      token: event.target.value
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log("I've Submitted", this.state);
+    spotify(this.spotifyStateChanged)(this.state.token);
+  }
+
   render() {
     return (
       <div className="app">
         <Header connected={this.state.connected} />
+        <form className="app__token" onSubmit={this.handleSubmit}>
+          <input
+            id="token-input"
+            type="text"
+            placeholder="Spotify Token"
+            onChange={this.handleChange}
+          />
+          <button type="submit">CONNECT</button>
+        </form>
         <div className="app__content">
           {this.state.connected === true ? (
             <PlayWindow

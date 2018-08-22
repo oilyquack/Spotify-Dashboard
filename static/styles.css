@@ -39,6 +39,15 @@ body {
   height: 100vh;
 }
 
+.app__token {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.app__token input {
+  width: 75vw;
+}
+
 .app__content {
   flex: 1;
 
