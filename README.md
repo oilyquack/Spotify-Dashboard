@@ -16,7 +16,7 @@ This application is built using Node.js and React.
 
 ## How To Use
 
-First of all, the Spotify SDK used by this application requires an SDK token to be generated using a Spotify Premium Account [here](https://developer.spotify.com/documentation/web-playback-sdk/quick-start/#). These tokens last for an hour (yes, this is kind of annoying - check out the Unresolved Issues section for more on how annoying this is).
+First of all, the Spotify SDK used by this application requires an SDK token to be generated using a Spotify Premium Account [here](https://developer.spotify.com/documentation/web-playback-sdk/quick-start/#). These tokens last for an hour before needing updating.
 
 Once you have input a usable SDK token, you will be instructed by Spotify Dashboard to go to your Spotify Device, open "Connect to a device" and connect to Spotify Dashboard. Once this happens, the songs that you are listening to will be represented on the app with the album cover, artist, song name and album name.
 
@@ -31,14 +31,15 @@ This device also works responsively at different views, allowing the user to rea
 - This app has good responsivity for various devices, allowing for a minimalist sleek view while keeping the ability to navigate through a wide range of information.
 - I feel that this project has demonstrated my ability to create and maintain clean and human-friendly React components and data structure.
 - Information presented in the app changes based on whether the user has a device connected or not. This is implemented in `App.js` on lines 24-44.
+- Anyone with a Spotify Premium account can request an SDK token and input it to use the app.
 
 ## Unresolved Issues/Un-implemented Features
 
 While I am very proud of the work I have done on this app, there are a number of issues that need resolving and should be kept in mind when using Spotify Dashboard. There were also a number of features that I was unable to implement which are listed below:
 
-- The Spotify SDK token only works for an hour. This can make the act of re-opening the spotify.js file, replacing the SDK token and rebooting the app in the browser somewhat tiresome. I would like to implement a feature whereby a new SDK token can be entered somewhere on the app which will replace the outdated token in the spotify.js file, but this is as yet un-implemented.
+- The Spotify SDK token only works for an hour. As a result, the project can stop working without warning. This is a nuisance in terms of usability and it would be nice to give some kind of indication as to how long you have left on the token/an alert when your time is about to expire.
 - The Ticketmaster API provides amazing information about an artist's upcoming events. Unfortunately, it often returns 429 response status codes for too many requests. Sadly, there is no `Retry-After` header attached indicating how often this would happen. This can provide some annoying user experiences as the Spotify SDK re-triggers a fetch about 1 minute into a song. It also re-triggers a fetch when the song is paused and then played again. This can happen quite a few times during a play through, which can provide some undesirable results from the API. It can also provide issues if, for example, you skip through a couple of songs and the app will tell the user that there are no upcoming events regardless of if this is true or not!
-- The event list does not sort into date order. This would make for a much better user experience.
+- I would like to refactor the way the dates are presented as they are not very readable. For instance, instead of the format YYYY-MM-DD I would prefer something along the lines of "Tuesday 1st November 2018". I would also like to add a countdown feature that shows how far away we are from the show.
 
 ## Acknowledgements
 
