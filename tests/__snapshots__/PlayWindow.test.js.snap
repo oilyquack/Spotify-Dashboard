@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayWindow matches the snapshot 1`] = `
+<div
+  className="app__playWindow"
+>
+  <h1 />
+  <img
+    className="app__playWindow__img"
+    src={undefined}
+  />
+  <p />
+  <p>
+    <i />
+  </p>
+</div>
+`;

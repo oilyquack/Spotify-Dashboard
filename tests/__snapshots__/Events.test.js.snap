@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Events renders correctly when an eventList is supplied 1`] = `
+<div
+  className="app__events"
+>
+  <div
+    className="app__events__event"
+  >
+    <p>
+      2018-08-23
+    </p>
+    <p>
+      Sunlight Supply Amphitheater
+    </p>
+    <p>
+      Ridgefield
+      ,
+       
+      United States Of America
+    </p>
+    <p>
+      <a
+        href="https://www.ticketmaster.com/slayer-ridgefield-washington-08-23-2018/event/0F00546222D78585"
+        target="_blank"
+      >
+        Get tickets here!
+      </a>
+    </p>
+  </div>
+  <div
+    className="app__events__event"
+  >
+    <p>
+      2018-08-26
+    </p>
+    <p>
+      SAP Center at San Jose
+    </p>
+    <p>
+      San Jose
+      ,
+       
+      United States Of America
+    </p>
+    <p>
+      <a
+        href="https://www.ticketmaster.com/slayer-san-jose-california-08-26-2018/event/1C005461CF80A081"
+        target="_blank"
+      >
+        Get tickets here!
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Events renders nothing when the result list is empty 1`] = `
+<div
+  className="app__events"
+/>
+`;
